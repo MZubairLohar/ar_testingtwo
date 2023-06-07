@@ -17,6 +17,14 @@ const ArViewer = () => {
       0.1,
       1000
     );
+
+    // Create cube geometry
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+    const cube = new THREE.Mesh(geometry, material);
+
+    // Add cube to the scene
+    scene.add(cube);
     const enableAr = () => {
       if (navigator.xr) {
         navigator.xr.isSessionSupported("immersive-ar").then((supported) => {
@@ -69,6 +77,8 @@ const ArViewer = () => {
     // Clean up the scene on unmount
     return () => {
       scene.remove(camera);
+      cube.geometry.dispose();
+      cube.material.dispose();
       camera = null;
     };
   }, []);
