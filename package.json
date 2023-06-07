@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-three/drei": "^9.74.6",
+    "@react-three/fiber": "^8.13.0",
+    "@react-three/xr": "^5.5.0",
+    "aframe": "^1.4.2",
+    "ar.js": "^2.2.2",
     "eslint": "8.42.0",
     "eslint-config-next": "13.4.4",
+    "jsartoolkit5": "^0.0.4",
     "next": "13.4.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "three": "^0.153.0"
   }
 }
